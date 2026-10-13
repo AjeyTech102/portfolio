@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Ajey Kumar B K, Technical Consultant, Corporate Trainer and Data & Cloud Technologies specialist.">
+  <title>Ajey Kumar B K | Technical Consultant & Corporate Trainer</title>
+  <style>
+    :root{--navy:#10213b;--blue:#246bfd;--teal:#16b8a6;--ink:#263449;--muted:#66758a;--pale:#f3f7fc;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #e8edf5}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-size:1.08rem;font-weight:800;color:var(--navy);letter-spacing:.2px}
+    .brand span{color:var(--blue)}
+    .navlinks{display:flex;gap:23px;flex-wrap:wrap;font-size:.92rem;font-weight:600;color:#43536b}
+    .navlinks a:hover{color:var(--blue)}
+    .hero{background:radial-gradient(circle at 80% 20%,rgba(22,184,166,.24),transparent 28%),linear-gradient(130deg,#0d1d35,#173b69 65%,#165e79);color:#fff;padding:94px 0 88px}
+    .hero-grid{display:grid;grid-template-columns:1.6fr .8fr;align-items:center;gap:48px}
+    .eyebrow{display:inline-block;border:1px solid rgba(255,255,255,.3);padding:7px 13px;border-radius:999px;font-size:.82rem;letter-spacing:.6px;color:#c8f7f0;margin-bottom:22px}
+    h1{font-size:clamp(2.4rem,5vw,4.3rem);line-height:1.1;letter-spacing:-1.8px;margin-bottom:20px}
+    .hero p{max-width:690px;color:#e0eaf8;font-size:1.08rem}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-block;padding:12px 19px;border-radius:9px;font-weight:750;border:1px solid transparent}
+    .btn-primary{background:var(--teal);color:#062a34}.btn-outline{border-color:rgba(255,255,255,.55);color:#fff}
+    .profile-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:30px;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,.15)}
+    .avatar{width:112px;height:112px;border-radius:28px;margin:0 auto 18px;background:linear-gradient(135deg,#16b8a6,#77b7ff);display:grid;place-items:center;font-size:2.3rem;font-weight:850;color:#10213b}
+    .profile-card h2{font-size:1.3rem}.profile-card p{font-size:.92rem;margin-top:7px}
+    .quickfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+    .fact{padding:17px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:12px}
+    .fact strong{display:block;font-size:1.2rem;color:#8af0e3}.fact span{font-size:.82rem;color:#e0eaf8}
+    section{padding:76px 0}
+    section:nth-of-type(even){background:var(--pale)}
+    .section-label{color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
+    h2.section-title{font-size:clamp(1.8rem,3vw,2.6rem);color:var(--navy);margin:7px 0 16px;letter-spacing:-.7px}
+    .section-intro{max-width:760px;color:var(--muted);margin-bottom:30px}
+    .about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:34px;align-items:start}
+    .about-copy p{margin-bottom:14px;color:#536176}
+    .highlight-box{background:#fff;border:1px solid #e2eaf5;border-radius:18px;padding:24px;box-shadow:0 10px 35px rgba(25,54,95,.06)}
+    .highlight-box h3{color:var(--navy);margin-bottom:12px}
+    .check-list{list-style:none}.check-list li{padding:7px 0;color:#536176}.check-list li:before{content:"✓";color:#0ba896;font-weight:900;margin-right:10px}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .skill-card,.experience-card,.engagement-card{background:#fff;border:1px solid #e2eaf5;border-radius:16px;padding:23px;box-shadow:0 8px 24px rgba(25,54,95,.04)}
+    .skill-card .icon{font-size:1.55rem;margin-bottom:8px}.skill-card h3{color:var(--navy);font-size:1.08rem;margin-bottom:10px}
+    .skill-card p{font-size:.94rem;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+    .tag{font-size:.8rem;background:#edf4ff;color:#2854a1;padding:5px 10px;border-radius:999px}
+    .timeline{display:grid;gap:17px}
+    .experience-card{border-left:4px solid var(--blue)}
+    .experience-card h3{color:var(--navy);font-size:1.12rem}.meta{font-size:.88rem;color:var(--blue);font-weight:700;margin:3px 0 10px}
+    .experience-card ul{padding-left:20px;color:var(--muted)}.experience-card li{margin:4px 0}
+    .engagement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .engagement-card h3{font-size:1rem;color:var(--navy);margin-bottom:5px}.engagement-card p{font-size:.91rem;color:var(--muted)}
+    .institutions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .institution{padding:9px 13px;background:#fff;border:1px solid #dfe8f5;border-radius:9px;font-size:.9rem;color:#40516a}
+    .contact{background:linear-gradient(130deg,#10213b,#16476a);color:#fff}
+    .contact h2.section-title{color:#fff}.contact .section-label{color:#8af0e3}.contact .section-intro{color:#d6e3f4}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .contact-card{padding:22px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
+    .contact-card strong{display:block;color:#8af0e3;font-size:.82rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+    .contact-card a{overflow-wrap:anywhere}
+    footer{padding:22px;text-align:center;background:#0b1729;color:#b8c7dc;font-size:.85rem}
+    @media(max-width:800px){.hero-grid,.about-grid{grid-template-columns:1fr}.profile-card{max-width:360px}.skills-grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}.quickfacts{grid-template-columns:1fr 1fr}}
+    @media(max-width:540px){nav{padding:13px 0;align-items:flex-start;flex-direction:column}.navlinks{font-size:.84rem}.hero{padding:65px 0}.skills-grid,.engagement-grid,.contact-grid{grid-template-columns:1fr}.quickfacts{grid-template-columns:1fr}.fact{padding:12px}section{padding:55px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">AJEY KUMAR <span>B K</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+        <a href="#training">Training</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">TECHNICAL CONSULTANT · CORPORATE TRAINER</span>
+          <h1>Making technology practical, clear and career-ready.</h1>
+          <p>Technical Consultant, Corporate Trainer and Software Developer with 8+ years of experience in IT training, technical consulting and learning-content development across cloud technologies, data analytics and programming.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Get in Touch</a>
+            <a class="btn btn-outline" href="#experience">Explore Experience</a>
+          </div>
+          <div class="quickfacts">
+            <div class="fact"><strong>8+ Years</strong><span>Training & consulting</span></div>
+            <div class="fact"><strong>Cloud + Data</strong><span>Core focus areas</span></div>
+            <div class="fact"><strong>Hands-on</strong><span>Labs & learning content</span></div>
+          </div>
+        </div>
+        <aside class="profile-card">
+          <div class="avatar" aria-label="Initials AK">AK</div>
+          <h2>Ajey Kumar B K</h2>
+          <p>Data & Cloud Technologies<br>Devanahalli, Bengaluru, Karnataka</p>
+          <div class="tags" style="justify-content:center">
+            <span class="tag">Microsoft Azure</span><span class="tag">AWS</span><span class="tag">Power BI</span><span class="tag">Python</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <span class="section-label">About Me</span>
+      <h2 class="section-title">Training, consulting and technical enablement</h2>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I design and deliver classroom and virtual technical training that helps learners and teams build practical IT skills. My experience includes cloud platforms, business intelligence, data engineering, scripting and IT service management.</p>
+          <p>My approach combines structured course content, practical lab exercises, learner assessment and feedback. I also support training coordination and adapt material to suit different learner and organisational requirements.</p>
+        </div>
+        <div class="highlight-box">
+          <h3>Core Competencies</h3>
+          <ul class="check-list">
+            <li>Corporate technical training</li><li>Training needs and skills-gap analysis</li>
+            <li>Curriculum and lab development</li><li>Technical consulting</li>
+            <li>Learner assessment and feedback</li><li>Training coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <span class="section-label">Technical Expertise</span>
+      <h2 class="section-title">Skills & technologies</h2>
+      <p class="section-intro">A practical mix of cloud infrastructure, analytics, programming and enterprise technology topics.</p>
+      <div class="skills-grid">
+        <article class="skill-card"><div class="icon">☁️</div><h3>Cloud & Infrastructure</h3><p>Cloud service and deployment models, virtual networks, virtual machines and cloud security.</p><div class="tags"><span class="tag">Microsoft Azure</span><span class="tag">AWS</span></div></article>
+        <article class="skill-card"><div class="icon">📊</div><h3>Data Analytics & BI</h3><p>Data transformation, ETL, dashboard development and data visualisation.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span></div></article>
+        <article class="skill-card"><div class="icon">💻</div><h3>Programming & Scripting</h3><p>Programming fundamentals and automation-oriented scripting.</p><div class="tags"><span class="tag">Python</span><span class="tag">Scala</span><span class="tag">Java</span><span class="tag">PowerShell</span><span class="tag">HTML/CSS</span></div></article>
+        <article class="skill-card"><div class="icon">🔎</div><h3>Big Data & Engineering</h3><p>Big-data processing, data pipelines and event-streaming technologies.</p><div class="tags"><span class="tag">Apache Spark</span><span class="tag">Hadoop</span><span class="tag">Hive</span><span class="tag">Pig</span><span class="tag">Kafka</span><span class="tag">Azure Data Factory</span><span class="tag">Databricks</span></div></article>
+        <article class="skill-card"><div class="icon">🗄️</div><h3>Databases & Platforms</h3><p>Relational and NoSQL database concepts, development platforms and DevOps.</p><div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">NoSQL</span><span class="tag">Azure DevOps</span><span class="tag">Visual Studio</span><span class="tag">.NET Fundamentals</span></div></article>
+        <article class="skill-card"><div class="icon">🛠️</div><h3>Systems & Service Management</h3><p>Operating systems and IT service-management practices.</p><div class="tags"><span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">Ubuntu</span><span class="tag">openSUSE</span><span class="tag">ITIL</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <span class="section-label">Career Journey</span>
+      <h2 class="section-title">Professional experience</h2>
+      <div class="timeline">
+        <article class="experience-card">
+          <h3>Trainer and Training Manager · Livewire, Bengaluru</h3><div class="meta">July 2023 – June 2025</div>
+          <ul><li>Delivered classroom technical training and supported employee IT skills development across Microsoft technologies.</li><li>Conducted skills-gap analysis and refresher training for support teams and end users.</li></ul>
+        </article>
+        <article class="experience-card">
+          <h3>Senior IT Trainer</h3><div class="meta">2018 – March 2023</div>
+          <ul><li>Designed and delivered corporate learning programmes through classroom and virtual sessions.</li><li>Prepared course materials, practical exercises and resources for Power BI, Azure, Azure SQL, network security, AWS, PowerShell, Visual Studio and .NET.</li><li>Coordinated schedules, adapted content to learner needs and evaluated programme effectiveness.</li></ul>
+        </article>
+        <article class="experience-card">
+          <h3>IT Trainer · Access Automation Pvt. Ltd., Bengaluru</h3><div class="meta">2017 – 2018</div>
+          <ul><li>Conducted employee IT skills-gap analysis and classroom training on Microsoft products, Power BI and PowerPoint.</li><li>Created learning materials and hands-on exercises, delivered individual coaching and supported refresher training.</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="training">
+    <div class="container">
+      <span class="section-label">Selected Engagements</span>
+      <h2 class="section-title">Corporate & institutional training</h2>
+      <p class="section-intro">Selected training assignments and learning programmes based on the professional resume.</p>
+      <div class="engagement-grid">
+        <article class="engagement-card"><h3>Microsoft Azure & Virtual Networks</h3><p>Global Edge Software Ltd. · Bengaluru · March 2019</p></article>
+        <article class="engagement-card"><h3>AWS Cloud Solutions & Security</h3><p>HCL Technologies BPO Services Ltd. · Chennai · August 2019</p></article>
+        <article class="engagement-card"><h3>Data Engineering, AWS, Azure & Power BI</h3><p>Avyukti Technologies · 2019–2022; client teams included Capgemini, PwC, DXC, Mindtree, KPMG and Deloitte.</p></article>
+        <article class="engagement-card"><h3>PowerShell Scripting</h3><p>Koustuba Technologies · 2022 · Client: Accenture</p></article>
+        <article class="engagement-card"><h3>Azure Cloud Solution Services</h3><p>Data Tech Labs · November 2022 · Client: Eton Solutions</p></article>
+        <article class="engagement-card"><h3>ITIL & Cloud Overview</h3><p>Training engagements in 2023 with client teams including Wipro, DXC and Capgemini.</p></article>
+        <article class="engagement-card"><h3>Power BI & AWS Cloud Computing</h3><p>Brilliant Infotech, USA · August and November 2024; February–May 2025</p></article>
+        <article class="engagement-card"><h3>Azure and DevOps</h3><p>Koustuba Technologies · December 2022–January 2023 · Client: Torry Harris Integrated Solutions</p></article>
+      </div>
+      <h3 style="margin-top:32px;color:var(--navy)">Academic & institutional assignments</h3>
+      <div class="institutions">
+        <span class="institution">Vivekananda College</span><span class="institution">Sheshadripuram Institution</span>
+        <span class="institution">Mount Carmel Autonomous College</span><span class="institution">Falconn Group of Educations</span>
+        <span class="institution">Koshys College</span><span class="institution">SJBIT College</span>
+        <span class="institution">ABBS College</span><span class="institution">CIMS College</span>
+        <span class="institution">Christ College</span><span class="institution">East Point Engineering College</span>
+        <span class="institution">East Point College of Higher Education</span><span class="institution">SMVIT</span>
+        <span class="institution">Shanthinikethan Group of Institutions</span><span class="institution">Jain College</span>
+        <span class="institution">SIT and VTU, Kalaburagi</span><span class="institution">GSSS Institute of Engineering and Technology for Women</span>
+      </div>
+      <p style="margin-top:18px;color:var(--muted);font-size:.9rem">Institutional topics include AWS, Microsoft Azure, Power BI, Advanced Excel, Python and Data Analytics.</p>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="container">
+      <span class="section-label">How I Work</span>
+      <h2 class="section-title">From concepts to hands-on confidence</h2>
+      <div class="skills-grid">
+        <article class="skill-card"><div class="icon">🧭</div><h3>Understand the Need</h3><p>Identify learner goals and skill gaps, then tailor the training to the audience.</p></article>
+        <article class="skill-card"><div class="icon">🧪</div><h3>Build Practical Labs</h3><p>Develop structured learning content, demonstrations, exercises and guided practice.</p></article>
+        <article class="skill-card"><div class="icon">📈</div><h3>Review & Improve</h3><p>Use assessments and participant feedback to evaluate and improve learning programmes.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">Let’s discuss training or consulting</h2>
+      <p class="section-intro">For corporate training, technical workshops, curriculum and lab development, or data and cloud technology engagements, please get in touch.</p>
+      <div class="contact-grid">
+        <div class="contact-card"><strong>Email</strong><a href="mailto:kajeyuma@gmail.com">kajeyuma@gmail.com</a></div>
+        <div class="contact-card"><strong>Phone</strong><a href="tel:+919164773341">9164773341</a> · <a href="tel:+916363604041">6363604041</a></div>
+        <div class="contact-card"><strong>Location</strong><span>Devanahalli, Bengaluru, Karnataka</span></div>
+        <div class="contact-card"><strong>Focus Areas</strong><span>Corporate IT Training · Cloud · Data Analytics · Programming</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="year">2026</span> Ajey Kumar B K · Technical Consultant & Corporate Trainer</footer>
+</body>
+</html>
